@@ -1,6 +1,5 @@
 package creational.factorymethod;
 
-import creational.factorymethod.inter.Factory;
 import creational.factorymethod.inter.Product;
 
 

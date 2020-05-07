@@ -20,9 +20,18 @@ package creational.abstractfactory;
  **/
 public class Client {
     public static void main(String[] args) {
+
         AbstractFactory abstractFactory = new ConcreteFactory1();
+
         AbstractProductA productA = abstractFactory.createProductA();
+
+//        ProductA1 pA1=(ProductA1)productA;
+//        pA1.ProductA();
+
+        productA.productA();
         AbstractProductB productB = abstractFactory.createProductB();
+
+        productB.productB();
         // do something with productA and productB
     }
 }

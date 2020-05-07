@@ -6,4 +6,5 @@ package creational.simplefactory.inter;
  * @date: 2020-05-04 11:20
  **/
 public interface Product {
+    void print();
 }

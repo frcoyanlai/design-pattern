@@ -6,4 +6,7 @@ package creational.abstractfactory;
  * @date: 2020-05-04 13:48
  **/
 public class AbstractProductA {
+    void productA(){
+
+    }
 }

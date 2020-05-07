@@ -27,8 +27,9 @@ public class AbstractStringBuilder {
 
     private void ensureCapacityInternal(int minimumCapacity) {
         // overflow-conscious code
-        if (minimumCapacity - value.length > 0)
+        if (minimumCapacity - value.length > 0){
             expandCapacity(minimumCapacity);
+        }
     }
 
     void expandCapacity(int minimumCapacity) {

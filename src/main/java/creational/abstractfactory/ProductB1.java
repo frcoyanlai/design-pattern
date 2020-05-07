@@ -6,4 +6,8 @@ package creational.abstractfactory;
  * @date: 2020-05-04 13:49
  **/
 public class ProductB1 extends AbstractProductB {
+    @Override
+    void productB(){
+        System.out.println("ProductB1 生产 ProductB");
+    }
 }

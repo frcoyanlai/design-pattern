@@ -142,6 +142,11 @@ class Singleton5 {
     private Singleton5() {
     }
 
+    /**
+     * 虚拟机会保证一个类的类构造器<clinit>()在多线程环境中被正确的加锁、同步，如果多个线程同时去初始化一个类，
+     * 那么只会有一个线程去执行这个类的类构造器<clinit>()，其他线程都需要阻塞等待，直到活动线程执行<clinit>()方法完毕。
+     * 在同一个类加载器下，一个类型只会被初始化一次。
+     */
     private static class SingletonHolder {
         private static final Singleton5 INSTANCE = new Singleton5();
     }
@@ -159,6 +164,8 @@ class Singleton5 {
  * 如果要防止这种攻击，需要在构造函数中添加防止多次实例化的代码。该实现是由 JVM 保证只会实例化一次，因此不会出现上述的反射攻击。
  *
  * 该实现在多次序列化和序列化之后，不会得到多个实例。而其它实现需要使用 transient 修饰所有字段，并且实现序列化和反序列化的方法。
+ *
+ * 反射在通过newInstance创建对象时，会检查该类是否ENUM修饰，如果是则抛出异常，反射失败。
  */
 enum Singleton6 {
     INSTANCE;

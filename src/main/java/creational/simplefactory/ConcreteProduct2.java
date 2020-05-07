@@ -8,4 +8,8 @@ import creational.simplefactory.inter.Product;
  * @date: 2020-05-04 11:47
  **/
 public class ConcreteProduct2 implements Product {
+    @Override
+    public void print() {
+        System.out.println("ConcreteProduct2");
+    }
 }

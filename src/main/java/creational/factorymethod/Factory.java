@@ -1,4 +1,6 @@
-package creational.factorymethod.inter;
+package creational.factorymethod;
+
+import creational.factorymethod.inter.Product;
 
 /**
  * @author: songyanlai
